@@ -14,5 +14,5 @@ def coleta_dados_usuario(request):
 
 
 
-def cadastro(request):
+def Inscricao (request, id_curso):
     return render(request, 'cadastro.html')  # Certifique-se de que index.html existe na pasta de templates

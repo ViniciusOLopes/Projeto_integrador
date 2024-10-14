@@ -9,3 +9,4 @@ class UsuariosForm(forms.ModelForm):
             'Emissao': forms.DateInput(attrs={'type': 'date'}),
             'Data_Nascimento': forms.DateInput(attrs={'type': 'date'}),
         }
+     
