@@ -18,7 +18,6 @@ class CheckDns(email):
     except Exception as e:  # Captura qualquer outra exceção
         raise ValidationError(f"Ocorreu um erro ao validar o domínio {dominio}")
 
-
 class Usuarios(models.Model):
     id_usuario = models.AutoField(primary_key=True)
     nome = models.TextField(max_length=255)

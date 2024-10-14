@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.shortcuts import render
 from .forms import UsuariosForm
+from .models import Usuarios
 
 def coleta_dados_usuario(request):
     if request.method == "POST":
@@ -12,7 +13,18 @@ def coleta_dados_usuario(request):
         form = UsuariosForm()
     return render(request, 'cadastro.html', {'form': form})
 
+def criacao_cursos(request):
+    return render(request, 'curso.html')
 
+def inscricao (request):
+    return render(request, 'inscricao.html') 
 
-def Inscricao (request, id_curso):
-    return render(request, 'cadastro.html')  # Certifique-se de que index.html existe na pasta de templates
+def sorteio_aluno(request):
+    alunos = Usuarios.object.all()
+
+    if alunos.exists():
+        aluno_sorteio = random.choice(alunos)
+    else:
+        aluno_sorteio = None
+    return render(request,'sorteio.html', {'aluno_sorteado':aluno_sorteio})
+

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição - Ação de Extensão</title>
+    <script>
+        function toggleInput() {
+            //Criando rreferencia dos botoes
+            const interna = document.getElementById('comunidadeInterna');
+            const externa = document.getElementById('comunidadeExterna');
+            //Referencia da caixa de texto
+            const cursoTextBox = document.getElementById('cursoTextBox')
+            // Se o radio estiver marcado, a caixa de texto será desabilitada
+            if (externa.checked) {
+                cursoTextBox.disabled = true;
+            } else {
+                cursoTextBox.disabled = false;
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            border: 1px solid #000;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 18px;
+        }
+        table {
+            width: 100%;
+            border-collapse:collapse;
+            margin-bottom: 15px;
+        }
+        td, th {
+            border: 1px solid #000;
+            padding: 5px;
+            text-align: left;
+        }
+        input[type="text"], input[type="email"], input[type="date"], input[type="tel"] {
+            width: 100%;
+            padding: 5px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+        }
+        .checkbox-group label {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>INSCRIÇÃO - AÇÃO DE EXTENSÃO – CAMPUS ANÁPOLIS</h1>
+    
+    <table>
+        <tr>
+            <td colspan="2">Nome da Ação de Extensão:</td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="text" name="acaoExtensao" placeholder="Nome da Ação de Extensão"></td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+
+            <th>Comunidade</th>
+        </tr>
+            <td>
+                <label><input type="radio" name="comunidade" value="interna"  id="comunidadeInterna" onclick="toggleInput()"> Comunidade Interna</label><br>
+                <label><input type="radio" name="comunidade" value="externa" id="comunidadeExterna" onclick="toggleInput()"> Comunidade Externa</label><br>
+                <label>Curso: <input type="text" name="curso" id="cursoTextBox"></label>
+            </td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <td>Nome:</td>
+            <td colspan="3"><input type="text" name="nome"></td>
+        </tr>
+        <tr>
+            <td>CPF:</td>
+            <td><input type="text" name="cpf"></td>
+            <td>RG:</td>
+            <td><input type="text" name="rg"></td>
+        </tr>
+        <tr>
+            <td>Órgão Emissor:</td>
+            <td><input type="text" name="orgaoEmissor"></td>
+            <td>Data de Emissão:</td>
+            <td><input type="date" name="dataEmissao"></td>
+        </tr>
+        <tr>
+            <td>Cidade de Nascimento:</td>
+            <td><input type="text" name="cidadeNascimento"></td>
+            <td>Estado:</td>
+            <td><input type="text" name="estadoNascimento"></td>
+        </tr>
+        <tr>
+            <td>Data de Nascimento:</td>
+            <td><input type="date" name="dataNascimento"></td>
+        </tr>
+        <tr>
+            <td>Endereço:</td>
+            <td colspan="3"><input type="text" name="endereco"></td>
+        </tr>
+        <tr>
+            <td>Bairro:</td>
+            <td><input type="text" name="bairro"></td>
+            <td>Quadra:</td>
+            <td><input type="text" name="quadra"></td>
+        </tr>
+        <tr>
+            <td>Lote:</td>
+            <td><input type="text" name="lote"></td>
+            <td>Apartamento:</td>
+            <td><input type="text" name="apartamento"></td>
+        </tr>
+        <tr>
+            <td>CEP:</td>
+            <td><input type="text" name="cep"></td>
+            <td>Cidade:</td>
+            <td><input type="text" name="cidade"></td>
+        </tr>
+        <tr>
+            <td>Estado:</td>
+            <td><input type="text" name="estado"></td>
+            <td>Complemento:</td>
+            <td><input type="text" name="complemento"></td>
+        </tr>
+        <tr>
+            <td>Telefone Fixo:</td>
+            <td><input type="tel" name="telefoneFixo"></td>
+            <td>Celular:</td>
+            <td><input type="tel" name="telefoneCelular"></td>
+        </tr>
+        <tr>
+            <td>Fone celular alternativo:</td>
+            <td colspan="3"><input type="tel" name="foneAlternativo"></td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td colspan="3"><input type="email" name="email"></td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
